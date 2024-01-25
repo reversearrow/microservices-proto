@@ -8,7 +8,8 @@
      name: "Generate"
      runs-on: "ubuntu-latest"
      strategy:
-       matrix: ["order", "payment", "shipping"]
+       matrix:
+        service: ["order", "payment", "shipping"]
      steps:
        - name: Install Go
          uses: actions/setup-go@v2
