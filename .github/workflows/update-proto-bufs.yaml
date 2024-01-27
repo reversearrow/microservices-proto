@@ -9,7 +9,7 @@
      runs-on: "ubuntu-latest"
      strategy:
        matrix:
-        service: ["order", "payment", "shipping"]
+        service: ["order"]
      steps:
        - name: Install Go
          uses: actions/setup-go@v2
