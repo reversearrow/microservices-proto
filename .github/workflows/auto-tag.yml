@@ -5,6 +5,7 @@ on:
       - master
       - main
 jobs:
+  permissions: read-all
   build:
     runs-on: ubuntu-latest
     steps:
