@@ -9,6 +9,7 @@
    protoc:
      name: "Generate"
      runs-on: "ubuntu-latest"
+     permissions: write-all
      strategy:
        matrix:
         service: ["order"]
@@ -22,7 +23,10 @@
          run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
        - name: Generate for Golang
          shell: bash
+         with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
          run: |
            chmod +x "${GITHUB_WORKSPACE}/run.sh"
            ./run.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }}
+        
           
