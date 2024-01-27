@@ -12,6 +12,7 @@ message Item {
   string product_code = 2;
   string unit_price = 3;
   int32 quantity = 4;
+  bool calculate_tax = 5;
 }
 
 message CreateOrderResponse {
