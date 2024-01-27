@@ -5,6 +5,9 @@
        - '*'
    release:
      types: [published]
+   workflow_run:
+     workflows: [ "Auto Tag" ]
+     types: [ completed ]
  jobs:
    protoc:
      name: "Generate"
