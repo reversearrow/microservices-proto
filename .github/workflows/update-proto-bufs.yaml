@@ -24,7 +24,7 @@
        - name: Generate for Golang
          shell: bash
          with:
-           token: ${{ secrets.PAT }}
+           github_token: ${{ secrets.PAT }}
          run: |
            chmod +x "${GITHUB_WORKSPACE}/run.sh"
            ./run.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }}
