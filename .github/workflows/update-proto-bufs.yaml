@@ -3,6 +3,8 @@
    push:
      tags:
        - golang**
+   release:
+     types: [ published ]
  jobs:
    protoc:
      name: "Generate"
