@@ -2,7 +2,7 @@
  on:
    push:
      tags:
-       - 'golang*'
+       - '*'
    release:
      types: [published]
  jobs:
