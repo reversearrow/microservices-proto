@@ -16,4 +16,5 @@ go mod init github.com/reversearrow/microservices-proto/golang/"${SERVICE_NAME}"
 git config --global user.email "reversearrow@gmail.com"
 git config --global user.name "Jay Shah"
 git add . && git commit -am "proto update" || true
-git push origin master
+git tag -fa $TAG -m "$TAG"
+git push origin --tags
