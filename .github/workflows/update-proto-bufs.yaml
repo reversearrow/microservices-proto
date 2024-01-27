@@ -2,9 +2,9 @@
  on:
    push:
      tags:
-       - golang**
+       - 'golang*'
    release:
-     types: [ published ]
+     types: [published]
  jobs:
    protoc:
      name: "Generate"
